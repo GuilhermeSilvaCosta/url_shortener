@@ -1,8 +1,9 @@
 extends layout
 
-block content
-  h1= title
-  form(method="post", action="") 
+block body
+  div.container
+    h1= title
+    form(method="post", action="/shorturl") 
       span.label Informe a Ulr que deseja Encurtar
       br
       input(type="text", name="url")
