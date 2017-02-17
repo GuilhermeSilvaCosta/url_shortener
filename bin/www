@@ -15,7 +15,7 @@ const db = require('../config/db')(uri);
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.TEST_SERVICE_PORT || '3000');
 app.set('port', port);
 
 /**
