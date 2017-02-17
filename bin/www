@@ -8,7 +8,8 @@ var app = require('../app');
 var debug = require('debug')('url_shortener:server');
 var http = require('http');
 
-const db = require('../config/db')('mongodb://localhost/url_shortener');
+const uri = process.env.URI || 'mongodb://localhost/url_shortener'; 
+const db = require('../config/db')(uri);
 
 /**
  * Get port from environment and store in Express.
