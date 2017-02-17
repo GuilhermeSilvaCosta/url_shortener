@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 module.exports = function(uri){
    var options = {
-      user: process.env.TEST_MONGODB_DB_USER || null
-    , pass: process.env.TEST_MONGODB_DB_PASS || null
+      user: process.env.TEST_MONGODB_DB_USER
+    , pass: process.env.TEST_MONGODB_DB_PASS
     } 
     mongoose.connect(uri);
 
