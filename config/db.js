@@ -3,6 +3,10 @@
 const mongoose = require('mongoose');
 
 module.exports = function(uri){
+   var options = {
+      user: process.env.TEST_MONGODB_DB_USER || null
+    , pass: process.env.TEST_MONGODB_DB_PASS || null
+    } 
     mongoose.connect(uri);
 
     mongoose.connection.on('connected', function() {
