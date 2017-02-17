@@ -4,10 +4,11 @@ const mongoose = require('mongoose');
 
 module.exports = function(uri){
    var options = {
-      user: process.env.TEST_MONGODB_DB_USER
-    , pass: process.env.TEST_MONGODB_DB_PASS
-    } 
-    mongoose.connect(uri);
+      user: process.env.MONGODB_USER
+    , pass: process.env.MONGODB_PASSWORD
+    }
+    console.log('options: ', options); 
+    mongoose.connect(uri, options);
 
     mongoose.connection.on('connected', function() {
         console.log('Mongoose! Conectado em ' + uri);
