@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 module.exports = function(uri){
    var options = {
-      user: process.env.MONGODB_USER
+      user: process.env.TEST_MONGODB_USER
     , pass: process.env.MONGODB_PASSWORD
     }
     console.log('options: ', options); 
