@@ -1,7 +1,14 @@
 extends layout
 
-block content
-  div
-    a(href=urlBase+'/'+shorturl.codigo)
-        h2=urlBase+'/'+shorturl.codigo    
-    h4=shorturl.url
+block body
+  div.container
+    div.jumbotron
+        h1="Encurtador de Url"
+        div.row
+            a(href=urlBase+'/'+shorturl.codigo)
+                h2=urlBase+'/'+shorturl.codigo    
+            small=shorturl.url
+            br
+            div.col-xs-12.col-sm-12.col-md-4.col-lg-4(style="padding-left: 0")
+                a.btn.btn-primary(href=urlBase)
+                    span="Encurtar outra"

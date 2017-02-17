@@ -2,9 +2,10 @@ extends layout
 
 block body
   div.container
-    h1= title
-    form(method="post", action="/shorturl") 
-      span.label Informe a Ulr que deseja Encurtar
-      br
-      input(type="text", name="url")
-      input(type="submit", value="Encurtar")
+    div.jumbotron
+      h1= title
+      form(method="post", action="/shorturl")                                          
+        div.input-group          
+          input.form-control(type="text", name="url")
+          span.input-group-btn
+            input.btn.btn-default(value="Encurtar", type="submit")
